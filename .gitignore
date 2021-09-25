@@ -1,6 +1,7 @@
 # Folders
 data/
 models/
+runs/
 
 # Pycharm
 .idea/

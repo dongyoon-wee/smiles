@@ -52,12 +52,12 @@ def get_dataset():
     train_dataset = CustomDataset(train_seqs, train_labels)
     val_dataset = CustomDataset(val_seqs, val_labels)
 
-    return train_dataset, val_dataset
+    return train_dataset, val_dataset, max_len
 
 
 if __name__=='__main__':
 
-    train_dataset, val_dataset = get_dataset()
+    train_dataset, val_dataset, max_len = get_dataset()
     train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, num_workers=16, shuffle=True)
     val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE, num_workers=16, shuffle=False)
 
